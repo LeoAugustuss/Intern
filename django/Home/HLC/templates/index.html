@@ -22,7 +22,7 @@
                 <li><a href="#doctor">Doctor's</a></li>
                 <li><a href="#speciality">Speciality's</a></li>
                 <li><a href="#patient">Patient Reviews</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#contact">Connect With Us</a></li>
 
             </ul>
         </div>
@@ -50,7 +50,7 @@
 
                 </div>
                 <div class="card">
-                    <img src="/{%static 'images/doc2.png'%}" alt="">
+                    <img src="{%static 'images/doc2.png'%}" alt="">
                     <p>Susmita Adhikari</p>
                     <p>Specialization  in ophthalmology </p>
 
@@ -76,13 +76,13 @@
 
                 </div>
                 <div class="spCard">
-                    <img src="{%static 'images/s2.jpg'%}" alt="">
+                    <img src="{%static 'images/s2.png'%}" alt="">
                     <p>Ophthalmology</p>
                     <p>A medical doctor who is able to treat complicated eye problems </p>
 
                 </div>
                 <div class="spCard">
-                    <img src="{%static 'images/s3.jpg'%}" alt="">
+                    <img src="{%static 'images/s3.png'%}" alt="">
                     <p>Emergency Medicine</p>
                     <p>Is a dynamic specialty, offering a large day-to-day variety in medical cases and situations.</p>
 
@@ -94,7 +94,7 @@
             <div class="head">
                 <h1>Patient Review's</h1>
             </div>
-            <div class="reviews">
+            <div class="reviews" style="z-index: -1;">
                 <div class="patientReview">
                     <img src="{%static 'images/p1.jpg'%}" alt="">
                     <img src="{%static 'images/p2.jpg'%}" alt="">
@@ -115,13 +115,13 @@
 
         <div id="contact">
             <div class="head">
-                <h1>Contact Us</h1>
+                <h1>Login Here</h1>
             </div>
             <div class="contact">
                 <h1>Connect With Us</h1>
-                <input type="text" placeholder="Enter Email" id="email">
-                <input type="password" placeholder="Enter password" id="pass"/>
-                <button id="connectBtn">Connect</button>
+                <input type="email" placeholder="Enter Email" id="email">
+                <input type="password" placeholder="Enter password" id="password"/>
+                <button id="connectBtn" style="text-decoration: none;"><a href="login"> Connect </a></button>
 
             </div>
         </div>

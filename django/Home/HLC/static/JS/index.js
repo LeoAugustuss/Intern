@@ -58,7 +58,23 @@ connectBtn.addEventListener("click", function(){
 
    if(email.value == "" && pass.value == ""){
        alert("Enter Details")
-   }else{
+   }
+   if (email === "" || password === "") {
+    alert("Both email and password must be filled out");
+    return false;
+}
+   else{
        alert("You Logged IN")
    }
 })
+
+function validateForm() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+   
+
+    // Add any additional validation if necessary
+
+    return true;
+}
