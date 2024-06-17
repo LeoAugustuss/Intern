@@ -23,3 +23,26 @@ def insert(request):
     else:
         form = Userinfo()
     return render(request, "index.html", {'form':form})
+
+def show(request):
+    userdetails = Userdetails.objects.all()
+    return render(request, "userdetails.html", {'userdetails': userdetails})
+
+def edit(request, id):
+    userinfo = Userdetails.objects.get(id=id)
+    return render(request, 'admin/edit.html', {'userinfo': userinfo})
+
+
+def update(request, id):
+    userinfo = Userdetails.objects.get(id=id)
+    form = Userinfo(request.POST, instance=userinfo)
+    if form.is_valid():
+        form.save()
+        return redirect("/show")
+    return render(request, 'admin/edit.html', {'userinfo': userinfo})
+
+
+def destroy(request, id):
+    userinfo = Userdetails.objects.get(id=id)
+    userinfo.delete()
+    return redirect("/show")
