@@ -1,14 +1,18 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeLikeCare</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container">
         <nav>
@@ -17,22 +21,21 @@
             </div>
             <i id="bar" class="fa-solid fa-bars"></i>
             <div class="dropdown-content">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="#doctor">Doctor's</a></li>
-                <li><a href="#speciality">Speciality's</a></li>
-                <li><a href="#patient">Patient Reviews</a></li>
-                <li><a href="#contact">Connect With Us</a></li>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#doctor">Doctor's</a></li>
+                    <li><a href="#speciality">Speciality's</a></li>
+                    <li><a href="#patient">Patient Reviews</a></li>
+                    <li><a href="#contact">Connect With Us</a></li>
 
-            </ul>
-        </div>
+                </ul>
+            </div>
         </nav>
 
         <div class="main">
             <div class="mainText">
-                <h1>Real Heros don't  <br>
-                    Always wear cape</h1>
-                <h3>Best Team's</h3>
+                <h1>Real Heroes don't <br> Always Wear Capes</h1>
+                <h3>Best Teams</h3>
                 <button>Show more</button>
             </div>
             <img id="img1" src="{%static 'images/heros.png'%}" alt="">
@@ -40,7 +43,7 @@
 
         <div id="doctor">
             <div class="head">
-                <h1>Our Doctor's</h1>
+                <h1>Our Doctors</h1>
             </div>
             <div class="teams">
                 <div class="card">
@@ -52,7 +55,7 @@
                 <div class="card">
                     <img src="{%static 'images/doc2.png'%}" alt="">
                     <p>Susmita Adhikari</p>
-                    <p>Specialization  in ophthalmology </p>
+                    <p>Specialization in ophthalmology </p>
 
                 </div>
                 <div class="card">
@@ -66,33 +69,33 @@
 
         <div id="speciality">
             <div class="head">
-                <h1>Our Speciality's</h1>
+                <h1>Our Specialities</h1>
             </div>
-            <div class="speciality">
+            <div class="specialities">
                 <div class="spCard">
                     <img src="{%static 'images/s1.jpg'%}" alt="">
                     <p>Sonology</p>
                     <p>Is a neologism used to describe the study of sound in a variety of disciplines.</p>
-
                 </div>
+
                 <div class="spCard">
                     <img src="{%static 'images/s2.png'%}" alt="">
                     <p>Ophthalmology</p>
                     <p>A medical doctor who is able to treat complicated eye problems </p>
-
                 </div>
+
                 <div class="spCard">
                     <img src="{%static 'images/s3.png'%}" alt="">
                     <p>Emergency Medicine</p>
                     <p>Is a dynamic specialty, offering a large day-to-day variety in medical cases and situations.</p>
-
                 </div>
+
             </div>
         </div>
 
         <div id="patient">
             <div class="head">
-                <h1>Patient Review's</h1>
+                <h1>Patient Reviews</h1>
             </div>
             <div class="reviews" style="z-index: -1;">
                 <div class="patientReview">
@@ -105,7 +108,7 @@
                     <img src="{%static 'images/p4.png'%}" alt="">
 
                 </div>
-                  <div class="patientReview">
+                <div class="patientReview">
                     <img src="{%static 'images/p5.jpg'%}" alt="">
                     <img src="{%static 'images/p6.jpg'%}" alt="">
 
@@ -119,59 +122,94 @@
             </div>
             <div class="contact">
                 <h1>Connect With Us</h1>
-                <input type="email" placeholder="Enter Email" id="email">
-                <input type="password" placeholder="Enter password" id="password"/>
-                <button id="connectBtn" style="text-decoration: none;"><a href="login"> Connect </a></button>
-
+                <br>
+                <label for="">Username</label>
+                <input type="text" id="Username" placeholder="Enter your Username"><br>
+                <br>
+                <label for="">Password</label>
+                <input type="password" id="Password" placeholder="Enter your password">
+                <button id="connectBtn"><a href="login"> Sign In </a></button>
+                <button id="signUpbtn" onclick="openpopup()">Sign Up</button>
+                <div class="popup" id="popup">
+                    <div class="closeSignBtn">
+                        <button class="close" id="closeSignIn" onclick="closeSignIn()">
+                            <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+                        </button>
+                    </div>
+                    <form action="insert" method="POST">
+                    {% csrf_token %}
+                    <br>
+                      <label for="">Username</label>
+                      <input type="text" id="username" name="username" placeholder="Create a username" required>
+                      <br>
+                      <label for="">First Name</label>
+                       <input type="text" id="Fname" name="fname" placeholder="Enter your first name" required>
+                      <br>
+                       <label for="">Last Name</label>
+                      <input type="text" id="Lname" name="lname" placeholder="Enter your second name" required>
+                      <br>
+                      <label for="">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                      <br>
+                      <br>
+                      <label for="">Password</label>
+                      <input type="password" id="password" name="password" placeholder="Create a password" required>
+                      <br>
+                      <br>
+                      <label for="">Confirm Password</label>
+                      <input type="password" id="Cpassword" name="confirmpassword" placeholder="Confirm your password" required>
+                      <p id="message"></p>
+                      <br>
+                      <button type="submit" onclick="signUp()">Sign Up</button>
+                </div>
+                    </form>
             </div>
+            
         </div>
+    </div>
 
-        <div class="footer">
-            <div class="text">
-                <h3>About Us</h3>
-                <p>24 Hours</p>
-                <p>Top Doctor</p>
-                <p>Best Care</p>
-                <p>Patient</p>
-                <p></p>
+    <div class="footer">
+        <div class="text">
+            <h3>About Us</h3>
+            <p>24 Hours</p>
+            <p>Top Doctor</p>
+            <p>Best Care</p>
+            <p>Patient</p>
 
-            </div>
-            <div class="text">
-                <h3>Speciality</h3>
-                <p>Sonology</p>
-                <p>Radiology</p>
-                <p>Ophthalmology</p>
-                <p>Emergency Medicine</p>
-
-            </div>
-            <div class="text">
-                <h3>Best Teams</h3>
-                <p>Doctor's</p>
-                <p>Nursing</p>
-                <p>Staff</p>
-                <p>Hospital</p>
-                <p></p>
-
-            </div>
-            <div class="text">
-                <h3>Address</h3>
-                <p>Near Clock Tower</p>
-                <p>Gelephu,Sarpang,Bhutan</p>
-                <p>+025-2222</p>
-                <p>+975-1780-6767</p>
-                
-
-            </div>
         </div>
+        <div class="text">
+            <h3>Speciality</h3>
+            <p>Sonology</p>
+            <p>Radiology</p>
+            <p>Ophthalmology</p>
+            <p>Emergency Medicine</p>
 
-        <div class="detail">
-            <button id="closeBtn">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="content">
-                
-            </div>
         </div>
+        <div class="text">
+            <h3>Best Teams</h3>
+            <p>Doctors</p>
+            <p>Nursing</p>
+            <p>Staff</p>
+            <p>Hospital</p>
+
+        </div>
+        <div class="text">
+            <h3>Address</h3>
+            <p>Near Clock Tower</p>
+            <p>Gelephu,Sarpang,Bhutan</p>
+            <p>+025-2222</p>
+            <p>+975-1780-6767</p>
+        </div>
+    </div>
+
+    <div class="detail">
+        <button id="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="content">
+
+        </div>
+    </div>
     </div>
     <script src="{%static 'JS/index.js'%}"></script>
 </body>

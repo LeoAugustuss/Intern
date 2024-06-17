@@ -2,7 +2,45 @@ let slide = document.querySelectorAll(".patientReview");
 let card = document.querySelectorAll(".card");
 let closeBtn = document.getElementById("closeBtn");
 let connectBtn = document.getElementById("connectBtn");
+const popup = document.getElementById("popup");
+const signupBtn = document.getElementById("signUpbtn");
+const closeSignBtn = document.getElementById("closeSignIn");
 
+
+/*function signUp(){
+    const error = checkPassword();
+    if(!error){
+
+        closepopup();
+
+    }
+    
+}
+
+function checkPassword(){
+    let password = document.getElementById("password").value;
+    let cnfrmPassword = document.getElementById("Cpassword").value;
+    console.log(" Password:", password,'\n',"Confirm Password:",cnfrmPassword);
+    let message = document.getElementById("message");
+
+    if(password.length != 0){
+        if(password !== cnfrmPassword){
+            message.textContent = "Password don't match";
+            message.style.backgroundColor = "#ff4d4d";
+            return true;
+        }
+    }
+    else{
+        alert("Password can't be empty!");
+        message.textContent = "";
+    }
+}*/
+signupBtn.addEventListener("click",function(){
+    popup.classList.add("open-popup");
+})
+closeSignBtn.addEventListener("click",function(){
+    popup.classList.remove("open-popup");
+})
 
 
 let count = 0;
@@ -72,9 +110,6 @@ function validateForm() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-   
-
-    // Add any additional validation if necessary
-
     return true;
 }
+
